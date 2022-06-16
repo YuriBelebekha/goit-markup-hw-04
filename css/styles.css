@@ -3,16 +3,17 @@
   --main-logo-font-family: 'Raleway', sans-serif;
 
   --primary-text-color: #212121;
-  --secondary-text-color: #757575;  
+  --secondary-text-color: #757575;
+  --opacity-text-color: rgba(255, 255, 255, 0.6);
   --accent-color: #2196F3;
   --btn-color-hover: #188CE8;
   --primary-white-color: #ffffff;
   --primary-bg-color: #2F303A;
   --secondary-bg-color: #F5F4FA;
+  --fallback-bg-color: #C4C4C4;
   --logo-black-color: #000000;
   --primary-border-color: #EEEEEE;
-  --secondary-border-color: #ECECEC;
-  --opacity-text-color: rgba(255, 255, 255, 0.6);
+  --secondary-border-color: #ECECEC;  
 
   --project-card-gap: 30px;
 }
@@ -188,12 +189,24 @@ img {
 
 /* ----- START - HERO ----- */
 .hero {
+  max-width: 1600px;
+  min-height: 600px;  
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 200px;  
 
   text-align: center;
-
-  background-color: var(--primary-bg-color);
+  
+  background-color: var(--fallback-bg-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+      url('../images/bg-hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
 }
 
 .hero-title {  
