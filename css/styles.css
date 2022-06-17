@@ -393,6 +393,8 @@ img {
 } 
 
 .client-list-item {
+  width: 170px;
+  height: 92px;
   margin-top: 50px;
 }
 
@@ -402,7 +404,10 @@ img {
 
 .client-list-link {
   display: flex;
-  padding: 16px 32px;  
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;  
 
   color: var(--primary-icon-color);
 
