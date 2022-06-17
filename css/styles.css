@@ -13,7 +13,8 @@
   --fallback-bg-color: #C4C4C4;
   --logo-black-color: #000000;
   --primary-border-color: #EEEEEE;
-  --secondary-border-color: #ECECEC;  
+  --secondary-border-color: #ECECEC;
+  --social-icon-color: #AFB1B8;
 
   --project-card-gap: 30px;
 }
@@ -102,6 +103,42 @@ img {
   cursor: pointer;
 }
 
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-list-item {
+  margin-top: 16px;
+  margin-bottom: 30px;
+}
+
+.social-list-item:not(:first-child) {
+  margin-left: 10px;
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  fill: var(--social-icon-color);
+  background-color: var(--primary-white-color);
+  border-radius: 50%;  
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--primary-white-color);
+}
+
 /* ===== END - COMPONENTS ===== */
 
 /* ----- START - HEADER ----- */
@@ -174,7 +211,10 @@ img {
 }
 
 .menu-contacts .link {
-  color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;  
+  
+  color: var(--secondary-text-color);   
 }
 
 .menu-nav .link.current,
@@ -183,6 +223,11 @@ img {
 .menu-contacts .link:hover,
 .menu-contacts .link:focus {
   color: var(--accent-color);  
+}
+
+.menu-contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* ===== END - HEADER ===== */
@@ -197,16 +242,15 @@ img {
   padding-bottom: 200px;  
 
   text-align: center;
-  
-  background-color: var(--fallback-bg-color);
+
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
       url('../images/bg-hero.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;  
+  background-size: cover;
+  background-repeat: no-repeat;  
+  background-color: var(--fallback-bg-color);  
 }
 
 .hero-title {  
@@ -260,6 +304,8 @@ img {
 }
 
 .feature-title {
+  margin-top: 30px;
+
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -274,6 +320,13 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+.feature-icon-box {
+  padding: 25px 100px;
+
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
 }
 
 /* ===== END - FEATURES ===== */
@@ -322,14 +375,11 @@ img {
 
 .staff-name {
   margin-top: 30px;
-
   font-weight: 500;  
 }
 
 .staff-position {
-  margin-top: 10px;
-  margin-bottom: 30px;
-
+  margin-top: 10px;  
   color: var(--secondary-text-color);
 }
 
